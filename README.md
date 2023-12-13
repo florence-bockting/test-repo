@@ -1,3 +1,5 @@
+![Tests](https://github.com/florence-bockting/test-repo/actions/workflows/documentation.yml/badge.svg)
+
 # Example project
 
 This is an exercise repository. Description will follow.
