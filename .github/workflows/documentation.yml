@@ -17,7 +17,7 @@ jobs:
       run: sphinx-build docs/source docs/_build
     - name: Commit changes to docs
       run: |
-        cd ./gh-pages
+        cd ../gh-pages
         cp -R ../master/docs/* ./
         git config --local user.email ""
         git config --local user.name "github-actions"
