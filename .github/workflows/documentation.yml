@@ -18,7 +18,7 @@ jobs:
     # still need to build and set the PAT to get a rebuild on the pages job,
     # apart from that quite clean and nice 
     - name: github pages deploy
-      uses: peaceiris/actions-gh-pages@v2.3.1
+      uses: florence-bockting/actions-gh-pages@v2.3.1
       env:
         PERSONAL_TOKEN: ${{ secrets.PAT }}
         PUBLISH_BRANCH: gh-pages
