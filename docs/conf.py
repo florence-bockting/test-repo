@@ -28,7 +28,7 @@ extensions = [
     "sphinx.ext.napoleon",    # Enables Sphinx to parse both NumPy and Google style docstrings
     "myst_nb",                # For compiling Jupyter Notebooks into high quality documentation formats
     "sphinx_design",          # For designing beautiful, view size responsive web components. 
-    "sphinx.ext.extlinks",
+    "sphinx.ext.githubpages"
     ]
 
 templates_path = ['_templates']
