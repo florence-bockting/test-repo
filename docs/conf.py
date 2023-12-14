@@ -50,12 +50,17 @@ html_theme = 'sphinx_book_theme'
 html_title = "Example Project"
 html_static_path = ['_static']
 
+html_show_sourcelink = False
+html_theme_options = {
+    "repository_url": "https://github.com/florence-bockting/example-project",
+    "repository_branch": "master",
+    "use_edit_page_button": True,
+    "use_issues_button": True,
+    "use_repository_button": True
+}
 
 # do not execute jupyter notebooks when building docs
 nb_execution_mode = "off"
-
-# download notebooks as .ipynb and not as .ipynb.txt
-html_sourcelink_suffix = ""
 
 suppress_warnings = [
     f"autosectionlabel._examples/{filename.split('.')[0]}"
