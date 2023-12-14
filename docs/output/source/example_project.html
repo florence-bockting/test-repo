@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>example_project package &#8212; Example Project</title>
   
@@ -29,21 +28,21 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
   <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/documentation_options.js?v=e645c8fa"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'source/example_project';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -303,6 +302,13 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-example_project.politeness_data">example_project.politeness_data module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example_project.politeness_data.DownloadData"><code class="docutils literal notranslate"><span class="pre">DownloadData</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example_project.politeness_data.DownloadData.__init__"><code class="docutils literal notranslate"><span class="pre">DownloadData.__init__()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example_project.politeness_data.DownloadData.__call__"><code class="docutils literal notranslate"><span class="pre">DownloadData.__call__()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example_project.politeness_data.DownloadData.set_cwd"><code class="docutils literal notranslate"><span class="pre">DownloadData.set_cwd()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example_project.politeness_data.DownloadData.download_data"><code class="docutils literal notranslate"><span class="pre">DownloadData.download_data()</span></code></a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example_project.politeness_data.PolitenessData"><code class="docutils literal notranslate"><span class="pre">PolitenessData</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example_project.politeness_data.PolitenessData.__init__"><code class="docutils literal notranslate"><span class="pre">PolitenessData.__init__()</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example_project.politeness_data.PolitenessData.__call__"><code class="docutils literal notranslate"><span class="pre">PolitenessData.__call__()</span></code></a></li>
@@ -325,19 +331,19 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="example-project-package">
-<h1>example_project package<a class="headerlink" href="#example-project-package" title="Permalink to this heading">#</a></h1>
+<h1>example_project package<a class="headerlink" href="#example-project-package" title="Link to this heading">#</a></h1>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">#</a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
 </section>
 <section id="module-example_project.download_data">
-<span id="example-project-download-data-module"></span><h2>example_project.download_data module<a class="headerlink" href="#module-example_project.download_data" title="Permalink to this heading">#</a></h2>
+<span id="example-project-download-data-module"></span><h2>example_project.download_data module<a class="headerlink" href="#module-example_project.download_data" title="Link to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="example_project.download_data.DownloadData">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">example_project.download_data.</span></span><span class="sig-name descname"><span class="pre">DownloadData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/download_data.html#DownloadData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.download_data.DownloadData" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">example_project.download_data.</span></span><span class="sig-name descname"><span class="pre">DownloadData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/download_data.html#DownloadData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.download_data.DownloadData" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="example_project.download_data.DownloadData.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/download_data.html#DownloadData.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.download_data.DownloadData.__init__" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/download_data.html#DownloadData.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.download_data.DownloadData.__init__" title="Link to this definition">#</a></dt>
 <dd><p>Download, preprocess, and plot politeness data from Bodo Winter</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -355,13 +361,13 @@ document.write(`
 
 <dl class="py method">
 <dt class="sig sig-object py" id="example_project.download_data.DownloadData.__call__">
-<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/download_data.html#DownloadData.__call__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.download_data.DownloadData.__call__" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/download_data.html#DownloadData.__call__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.download_data.DownloadData.__call__" title="Link to this definition">#</a></dt>
 <dd><p>Call self as a function.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="example_project.download_data.DownloadData.set_cwd">
-<span class="sig-name descname"><span class="pre">set_cwd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/download_data.html#DownloadData.set_cwd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.download_data.DownloadData.set_cwd" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">set_cwd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/download_data.html#DownloadData.set_cwd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.download_data.DownloadData.set_cwd" title="Link to this definition">#</a></dt>
 <dd><p>Set current working directory to desired local path</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -381,7 +387,7 @@ document.write(`
 
 <dl class="py method">
 <dt class="sig sig-object py" id="example_project.download_data.DownloadData.download_data">
-<span class="sig-name descname"><span class="pre">download_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/download_data.html#DownloadData.download_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.download_data.DownloadData.download_data" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">download_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/download_data.html#DownloadData.download_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.download_data.DownloadData.download_data" title="Link to this definition">#</a></dt>
 <dd><p>Download data from url</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -404,14 +410,85 @@ document.write(`
 
 </section>
 <section id="module-example_project.politeness_data">
-<span id="example-project-politeness-data-module"></span><h2>example_project.politeness_data module<a class="headerlink" href="#module-example_project.politeness_data" title="Permalink to this heading">#</a></h2>
+<span id="example-project-politeness-data-module"></span><h2>example_project.politeness_data module<a class="headerlink" href="#module-example_project.politeness_data" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="example_project.politeness_data.DownloadData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">example_project.politeness_data.</span></span><span class="sig-name descname"><span class="pre">DownloadData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/politeness_data.html#DownloadData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.DownloadData" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="example_project.politeness_data.DownloadData.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/politeness_data.html#DownloadData.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.DownloadData.__init__" title="Link to this definition">#</a></dt>
+<dd><p>Download, preprocess, and plot politeness data from Bodo Winter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>data_url</strong><span class="classifier">str</span></dt><dd><p>Url from where to download the data set.</p>
+</dd>
+<dt><strong>target_path</strong><span class="classifier">str</span></dt><dd><p>local working directory where data should be stored.</p>
+</dd>
+<dt><strong>data_file</strong><span class="classifier">str</span></dt><dd><p>name of file to which data should be saved.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="example_project.politeness_data.DownloadData.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/politeness_data.html#DownloadData.__call__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.DownloadData.__call__" title="Link to this definition">#</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="example_project.politeness_data.DownloadData.set_cwd">
+<span class="sig-name descname"><span class="pre">set_cwd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/politeness_data.html#DownloadData.set_cwd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.DownloadData.set_cwd" title="Link to this definition">#</a></dt>
+<dd><p>Set current working directory to desired local path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>target_path</strong><span class="classifier">str</span></dt><dd><p>local path that should be used as current working directory.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>current_working_directory</strong><span class="classifier">str</span></dt><dd><p>Prints current working directory.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="example_project.politeness_data.DownloadData.download_data">
+<span class="sig-name descname"><span class="pre">download_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/politeness_data.html#DownloadData.download_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.DownloadData.download_data" title="Link to this definition">#</a></dt>
+<dd><p>Download data from url</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>data_url</strong><span class="classifier">str</span></dt><dd><p>URL from which data should be downloaded.</p>
+</dd>
+<dt><strong>file_name</strong><span class="classifier">str</span></dt><dd><p>Name by which downloaded data file should be locally saved.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>None.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="example_project.politeness_data.PolitenessData">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">example_project.politeness_data.</span></span><span class="sig-name descname"><span class="pre">PolitenessData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/politeness_data.html#PolitenessData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.PolitenessData" title="Permalink to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">example_project.politeness_data.</span></span><span class="sig-name descname"><span class="pre">PolitenessData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/politeness_data.html#PolitenessData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.PolitenessData" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="example_project.politeness_data.PolitenessData.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/politeness_data.html#PolitenessData.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.PolitenessData.__init__" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/politeness_data.html#PolitenessData.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.PolitenessData.__init__" title="Link to this definition">#</a></dt>
 <dd><p>Download, preprocess, and plot politeness data from Bodo Winter</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -433,18 +510,18 @@ document.write(`
 
 <dl class="py method">
 <dt class="sig sig-object py" id="example_project.politeness_data.PolitenessData.__call__">
-<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/politeness_data.html#PolitenessData.__call__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.PolitenessData.__call__" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/politeness_data.html#PolitenessData.__call__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.PolitenessData.__call__" title="Link to this definition">#</a></dt>
 <dd><p>Call self as a function.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="example_project.politeness_data.PolitenessData.data_preprocessed">
-<span class="sig-name descname"><span class="pre">data_preprocessed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/politeness_data.html#PolitenessData.data_preprocessed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.PolitenessData.data_preprocessed" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">data_preprocessed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/politeness_data.html#PolitenessData.data_preprocessed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.PolitenessData.data_preprocessed" title="Link to this definition">#</a></dt>
 <dd><p>Read and preprocess data</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>data_file</strong><span class="classifier">str</span></dt><dd><p>name of locally saved data file..</p>
+<dt><strong>data_file</strong><span class="classifier">str</span></dt><dd><p>name of locally saved data file.</p>
 </dd>
 </dl>
 </dd>
@@ -463,7 +540,7 @@ gender, scenario, attitude, frequency, mean_pitch).</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="example_project.politeness_data.PolitenessData.plot_data">
-<span class="sig-name descname"><span class="pre">plot_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/politeness_data.html#PolitenessData.plot_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.PolitenessData.plot_data" title="Permalink to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">plot_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/example_project/politeness_data.html#PolitenessData.plot_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.PolitenessData.plot_data" title="Link to this definition">#</a></dt>
 <dd><p>Scatterplot showing the relation between pitch in Hz and gender and
 attitude.</p>
 <dl class="field-list simple">
@@ -486,7 +563,7 @@ gender, scenario, attitude, frequency, mean_pitch).</p>
 
 </section>
 <section id="module-example_project">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-example_project" title="Permalink to this heading">#</a></h2>
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-example_project" title="Link to this heading">#</a></h2>
 </section>
 </section>
 
@@ -546,6 +623,13 @@ gender, scenario, attitude, frequency, mean_pitch).</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-example_project.politeness_data">example_project.politeness_data module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example_project.politeness_data.DownloadData"><code class="docutils literal notranslate"><span class="pre">DownloadData</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example_project.politeness_data.DownloadData.__init__"><code class="docutils literal notranslate"><span class="pre">DownloadData.__init__()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example_project.politeness_data.DownloadData.__call__"><code class="docutils literal notranslate"><span class="pre">DownloadData.__call__()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example_project.politeness_data.DownloadData.set_cwd"><code class="docutils literal notranslate"><span class="pre">DownloadData.set_cwd()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example_project.politeness_data.DownloadData.download_data"><code class="docutils literal notranslate"><span class="pre">DownloadData.download_data()</span></code></a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example_project.politeness_data.PolitenessData"><code class="docutils literal notranslate"><span class="pre">PolitenessData</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example_project.politeness_data.PolitenessData.__init__"><code class="docutils literal notranslate"><span class="pre">PolitenessData.__init__()</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example_project.politeness_data.PolitenessData.__call__"><code class="docutils literal notranslate"><span class="pre">PolitenessData.__call__()</span></code></a></li>
@@ -570,7 +654,7 @@ gender, scenario, attitude, frequency, mean_pitch).</p>
   <div class="footer-item">
     
 <p class="component-author">
-By Florence Bockting
+By Your Name
 </p>
 
   </div>
@@ -580,7 +664,7 @@ By Florence Bockting
 
   <p class="copyright">
     
-      © Copyright 2023, Florence Bockting.
+      © Copyright 2023, Your Name.
       <br/>
     
   </p>
