@@ -15,16 +15,8 @@ jobs:
         pip install "numpydoc==1.1.0" "Sphinx==4.4.0" "furo" .
     - name: Build docs
       run: sphinx-build docs/source docs/_build
-    - name: Commit changes to docs
-      run: |
-        cd ../gh-pages
-        cp -R ../master/docs/* ./
-        git config --local user.email ""
-        git config --local user.name "github-actions"
-        git add -A
-        if ! git diff-index --quiet HEAD; then
-          git commit -m "auto: Rebuild docs."
-          git  push
-        else
-          echo No commit made because the docs have not changed.
-        fi
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./site
