@@ -15,8 +15,17 @@ jobs:
         pip install "numpydoc==1.1.0" "Sphinx==4.4.0" "furo" .
     - name: Build docs
       run: sphinx-build docs/source docs/_build
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
+    # still need to build and set the PAT to get a rebuild on the pages job,
+    # apart from that quite clean and nice 
+    - name: github pages deploy
+      uses: peaceiris/actions-gh-pages@v2.3.1
+      env:
+        PERSONAL_TOKEN: ${{ secrets.PAT }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: public
+
+    # since gh-pages has a history, this step might no longer be necessary.
+    - uses: actions/upload-artifact@v1
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./site
+        name: documentation
+        path: public
