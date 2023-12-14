@@ -16,11 +16,11 @@ jobs:
           pip install sphinx sphinx_rtd_theme myst_parser sphinx_book_theme sphinx_design install myst_nb numpydoc
       - name: Sphinx build
         run: |
-          sphinx-build docs docs/build
+          sphinx-build docs docs/_build
       - name: Deploy documentation to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages                     # The branch the action should deploy to.
-          folder: docs/build                  # The folder the action should deploy.
+          folder: docs/_build                  # The folder the action should deploy.
           git-config-name: Deployment Bot      # Name of the committer
           git-config-email: deploy@github.com  # Email of the committer
