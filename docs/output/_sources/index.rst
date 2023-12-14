@@ -11,9 +11,8 @@ Learning Sphinx and Git with an example project
    :hidden:
 
    Home <self>
-   API <source/modules.rst>
+   API <source/example_project>
    Example <notebooks/example_notebook>
-
 
 Introduction
 ------------
