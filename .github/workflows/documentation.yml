@@ -3,29 +3,23 @@ on:
   push:
     branches:
     - master
-
 jobs:
   docs:
     name: documentation
     runs-on: ubuntu-latest
     steps:
-
     - uses: actions/checkout@v2
-
     - name: Install Python
       uses: actions/setup-python@v1
       with:
         python-version: 3.8
-      
     - name: Install dependencies
       run: |
         pip install sphinx sphinx_rtd_theme myst_parser sphinx_book_theme sphinx_design install myst_nb numpydoc
-    
     - name: Sphinx build
       run: |
         cd docs
         make html
-
     - name: Deploy
       if: success()
       uses: peaceiris/actions-gh-pages@v3
