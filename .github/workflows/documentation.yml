@@ -11,16 +11,20 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
+      
       - name: Install dependencies
         run: |
           pip install sphinx sphinx_rtd_theme myst_parser sphinx_book_theme sphinx_design install myst_nb numpydoc
+      
       - name: Sphinx build
         run: |
-          sphinx-build ../docs/source ../docs/_build
-      - name: Deploy documentation to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+          cd ../docs
+          make html
+
+      - name: Deploy
+        if: success()
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: gh-pages                     # The branch the action should deploy to.
-          folder: ./_build                  # The folder the action should deploy.
-          git-config-name: Deployment Bot      # Name of the committer
-          git-config-email: deploy@github.com  # Email of the committer
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ../docs/_build/html/
