@@ -1,24 +1,27 @@
-name: "documentation"
-on: 
-- push
+name: documentation
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: write
 
 jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-python@v4 
-      with:
-        python-version: '3.9' 
-    - name: Install dependencies
-      run: |
-        pip install "numpydoc==1.1.0" "Sphinx==4.4.0" .
-    - name: Build docs
-      run: sphinx-build ../docs/source ../docs/build
-    - name: Deploy documentation to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        branch: gh-pages                     # The branch the action should deploy to.
-        folder: docs/build                       # The folder the action should deploy.
-        git-config-name: Deployment Bot      # Name of the committer
-        git-config-email: deploy@github.com  # Email of the committer
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+      - name: Install dependencies
+        run: |
+          pip install sphinx sphinx_rtd_theme myst_parser
+      - name: Sphinx build
+        run: |
+          sphinx-build docs build
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/
+          force_orphan: true
