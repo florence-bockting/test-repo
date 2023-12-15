@@ -24,7 +24,8 @@ extensions = [
     "sphinx.ext.viewcode",  # Include the source code in documentation
     "sphinx.ext.githubpages",  # Build for GitHub pages
     "numpydoc",  # Support NumPy style docstrings
-]   "myst_nb",
+    "myst_nb",
+]
 
 templates_path = ['_templates']
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
