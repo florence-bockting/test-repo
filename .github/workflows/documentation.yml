@@ -35,7 +35,7 @@ jobs:
         run: |
           cd ./master/docs
           make clean
-          make github
+          make html
       - name: Commit changes to docs
         run: |
           cd ./gh-pages
