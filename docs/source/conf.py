@@ -26,7 +26,7 @@ extensions = [
     "sphinx.ext.autosummary", # Generates function/method/attribute summary lists
     "sphinx.ext.napoleon",    # Enables Sphinx to parse both NumPy and Google style docstrings
     "myst_nb",                # For compiling Jupyter Notebooks into high quality documentation formats
-    #"sphinx.ext.githubpages",
+    "sphinx.ext.githubpages",
 ]
 
 templates_path = ['_templates']
