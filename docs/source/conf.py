@@ -2,10 +2,10 @@
 #
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
-import os
-import sys
+#import os
+#import sys
 
-sys.path.insert(0, os.path.abspath("../../example_project"))
+#sys.path.insert(0, os.path.abspath("../../example_project"))
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
@@ -18,37 +18,25 @@ release = '0.0.1'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    "sphinx.ext.autodoc",     # Support automatic documentation
-    "sphinx.ext.coverage",    # Automatically check if functions are documented
-    "sphinx.ext.mathjax",     # Allow support for algebra
-    "sphinx.ext.viewcode",    # Include the source code in documentation
-    "numpydoc",               # Support NumPy style docstrings
-    "sphinx.ext.autosummary", # Generates function/method/attribute summary lists
-    "sphinx.ext.napoleon",    # Enables Sphinx to parse both NumPy and Google style docstrings
-    "myst_nb",                # For compiling Jupyter Notebooks into high quality documentation formats
-    "sphinx.ext.githubpages",
+    "sphinx.ext.autodoc",  # Support automatic documentation
+    "sphinx.ext.coverage",  # Automatically check if functions are documented
+    "sphinx.ext.mathjax",  # Allow support for algebra
+    "sphinx.ext.viewcode",  # Include the source code in documentation
+    "sphinx.ext.githubpages",  # Build for GitHub pages
+    "numpydoc",  # Support NumPy style docstrings
 ]
 
 templates_path = ['_templates']
-exclude_patterns = []
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'sphinx_book_theme'
+html_theme = 'alabaster'
 html_static_path = ['_static']
 
-numpydoc_show_class_members = False
-
-autodoc_default_options = {
-    "members": "var1, var2",
-    "special-members": "__call__,__init__",
-    "undoc-members": True,
-    "exclude-members": "__weakref__",
-    "member-order": "bysource"
-}
 
 # do not execute jupyter notebooks when building docs
 nb_execution_mode = "off"
