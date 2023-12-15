@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>example_project package &#8212; test 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <script src="_static/documentation_options.js?v=e645c8fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Analysis Politeness Data" href="notebooks/example_notebook.html" />
+    <link rel="prev" title="example_project" href="modules.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="example-project-package">
+<h1>example_project package<a class="headerlink" href="#example-project-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-example_project.download_data">
+<span id="example-project-download-data-module"></span><h2>example_project.download_data module<a class="headerlink" href="#module-example_project.download_data" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="example_project.download_data.DownloadData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">example_project.download_data.</span></span><span class="sig-name descname"><span class="pre">DownloadData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/example_project/download_data.html#DownloadData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.download_data.DownloadData" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="example_project.download_data.DownloadData.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/example_project/download_data.html#DownloadData.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.download_data.DownloadData.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Download, preprocess, and plot politeness data from Bodo Winter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>data_url</strong><span class="classifier">str</span></dt><dd><p>Url from where to download the data set.</p>
+</dd>
+<dt><strong>target_path</strong><span class="classifier">str</span></dt><dd><p>local working directory where data should be stored.</p>
+</dd>
+<dt><strong>data_file</strong><span class="classifier">str</span></dt><dd><p>name of file to which data should be saved.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="example_project.download_data.DownloadData.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/example_project/download_data.html#DownloadData.__call__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.download_data.DownloadData.__call__" title="Link to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="example_project.download_data.DownloadData.set_cwd">
+<span class="sig-name descname"><span class="pre">set_cwd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/example_project/download_data.html#DownloadData.set_cwd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.download_data.DownloadData.set_cwd" title="Link to this definition">¶</a></dt>
+<dd><p>Set current working directory to desired local path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>target_path</strong><span class="classifier">str</span></dt><dd><p>local path that should be used as current working directory.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>current_working_directory</strong><span class="classifier">str</span></dt><dd><p>Prints current working directory.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="example_project.download_data.DownloadData.download_data">
+<span class="sig-name descname"><span class="pre">download_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/example_project/download_data.html#DownloadData.download_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.download_data.DownloadData.download_data" title="Link to this definition">¶</a></dt>
+<dd><p>Download data from url</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>data_url</strong><span class="classifier">str</span></dt><dd><p>URL from which data should be downloaded.</p>
+</dd>
+<dt><strong>file_name</strong><span class="classifier">str</span></dt><dd><p>Name by which downloaded data file should be locally saved.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>None.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-example_project.politeness_data">
+<span id="example-project-politeness-data-module"></span><h2>example_project.politeness_data module<a class="headerlink" href="#module-example_project.politeness_data" title="Link to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="example_project.politeness_data.DownloadData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">example_project.politeness_data.</span></span><span class="sig-name descname"><span class="pre">DownloadData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/example_project/politeness_data.html#DownloadData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.DownloadData" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="example_project.politeness_data.DownloadData.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/example_project/politeness_data.html#DownloadData.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.DownloadData.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Download, preprocess, and plot politeness data from Bodo Winter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>data_url</strong><span class="classifier">str</span></dt><dd><p>Url from where to download the data set.</p>
+</dd>
+<dt><strong>target_path</strong><span class="classifier">str</span></dt><dd><p>local working directory where data should be stored.</p>
+</dd>
+<dt><strong>data_file</strong><span class="classifier">str</span></dt><dd><p>name of file to which data should be saved.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="example_project.politeness_data.DownloadData.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/example_project/politeness_data.html#DownloadData.__call__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.DownloadData.__call__" title="Link to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="example_project.politeness_data.DownloadData.set_cwd">
+<span class="sig-name descname"><span class="pre">set_cwd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/example_project/politeness_data.html#DownloadData.set_cwd"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.DownloadData.set_cwd" title="Link to this definition">¶</a></dt>
+<dd><p>Set current working directory to desired local path</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>target_path</strong><span class="classifier">str</span></dt><dd><p>local path that should be used as current working directory.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>current_working_directory</strong><span class="classifier">str</span></dt><dd><p>Prints current working directory.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="example_project.politeness_data.DownloadData.download_data">
+<span class="sig-name descname"><span class="pre">download_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/example_project/politeness_data.html#DownloadData.download_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.DownloadData.download_data" title="Link to this definition">¶</a></dt>
+<dd><p>Download data from url</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>data_url</strong><span class="classifier">str</span></dt><dd><p>URL from which data should be downloaded.</p>
+</dd>
+<dt><strong>file_name</strong><span class="classifier">str</span></dt><dd><p>Name by which downloaded data file should be locally saved.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>None.</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="example_project.politeness_data.PolitenessData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">example_project.politeness_data.</span></span><span class="sig-name descname"><span class="pre">PolitenessData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/example_project/politeness_data.html#PolitenessData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.PolitenessData" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="example_project.politeness_data.PolitenessData.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/example_project/politeness_data.html#PolitenessData.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.PolitenessData.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Download, preprocess, and plot politeness data from Bodo Winter</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>data_file</strong><span class="classifier">str</span></dt><dd><p>name of file to which data should be saved.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>summary_stats</strong><span class="classifier">DataFrame</span></dt><dd><p>Summary statistics of the politeness data.</p>
+</dd>
+<dt><strong>plot</strong><span class="classifier">plt.plot</span></dt><dd><p>Plot of the politeness data.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="example_project.politeness_data.PolitenessData.__call__">
+<span class="sig-name descname"><span class="pre">__call__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/example_project/politeness_data.html#PolitenessData.__call__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.PolitenessData.__call__" title="Link to this definition">¶</a></dt>
+<dd><p>Call self as a function.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="example_project.politeness_data.PolitenessData.data_preprocessed">
+<span class="sig-name descname"><span class="pre">data_preprocessed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/example_project/politeness_data.html#PolitenessData.data_preprocessed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.PolitenessData.data_preprocessed" title="Link to this definition">¶</a></dt>
+<dd><p>Read and preprocess data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>data_file</strong><span class="classifier">str</span></dt><dd><p>name of locally saved data file.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>df_joined</strong><span class="classifier">polars.DataFrame</span></dt><dd><p>Preprocessed data set with 84 observations and 6 variables (subject,
+gender, scenario, attitude, frequency, mean_pitch).</p>
+</dd>
+<dt><strong>summaries</strong><span class="classifier">polars.DataFrame</span></dt><dd><p>Mean pitch value grouped by attitude (informel, polite) and gender
+(female, male).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="example_project.politeness_data.PolitenessData.plot_data">
+<span class="sig-name descname"><span class="pre">plot_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/example_project/politeness_data.html#PolitenessData.plot_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#example_project.politeness_data.PolitenessData.plot_data" title="Link to this definition">¶</a></dt>
+<dd><p>Scatterplot showing the relation between pitch in Hz and gender and
+attitude.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>df</strong><span class="classifier">polars.DataFrame</span></dt><dd><p>Preprocessed data set with 84 observations and 6 variables (subject,
+gender, scenario, attitude, frequency, mean_pitch).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>matplotlib.plot</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-example_project">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-example_project" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">test</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Home</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">example_project package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-example_project.download_data">example_project.download_data module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-example_project.politeness_data">example_project.politeness_data module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-example_project">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks/example_notebook.html">Example</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">example_project</a><ul>
+      <li>Previous: <a href="modules.html" title="previous chapter">example_project</a></li>
+      <li>Next: <a href="notebooks/example_notebook.html" title="next chapter">Analysis Politeness Data</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, flo.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/example_project.rst"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

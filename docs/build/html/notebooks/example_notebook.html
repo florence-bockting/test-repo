@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Analysis Politeness Data &#8212; test 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=039e1c02" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <script src="../_static/documentation_options.js?v=e645c8fa"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="example_project package" href="../example_project.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="analysis-politeness-data">
+<h1>Analysis Politeness Data<a class="headerlink" href="#analysis-politeness-data" title="Link to this heading">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">example_project.download_data</span> <span class="kn">import</span> <span class="n">DownloadData</span>
+<span class="kn">from</span> <span class="nn">example_project.politeness_data</span> <span class="kn">import</span> <span class="n">PolitenessData</span>
+
+<span class="c1"># set the current working directory</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">pathlib</span><span class="o">.</span><span class="n">PureWindowsPath</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\flobo\OneDrive\Dokumente\Phd-teaching\IntroPython\example-project&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="set-local-variables">
+<h2>Set local variables<a class="headerlink" href="#set-local-variables" title="Link to this heading">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># here we use pathlib.PureWindowsPath s.t. we don&#39;t need to care about</span>
+<span class="c1"># direction of backslashes</span>
+<span class="n">target_path</span> <span class="o">=</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">PureWindowsPath</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\flobo\OneDrive\Dokumente\Phd-teaching\IntroPython\example-project\examples\data&quot;</span><span class="p">)</span> 
+<span class="c1"># data set</span>
+<span class="n">data_url</span> <span class="o">=</span> <span class="s2">&quot;http://www.bodowinter.com/tutorial/politeness_data.csv&quot;</span>    
+<span class="n">data_file</span> <span class="o">=</span> <span class="s2">&quot;pitch_data.csv&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="download-data">
+<h2>Download data<a class="headerlink" href="#download-data" title="Link to this heading">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># download politeness data and save data file in target directory</span>
+<span class="n">data_download</span> <span class="o">=</span> <span class="n">DownloadData</span><span class="p">(</span><span class="n">data_url</span><span class="p">,</span> <span class="n">target_path</span><span class="p">,</span> <span class="n">data_file</span><span class="p">)</span>
+<span class="c1"># set working directory</span>
+<span class="n">data_download</span><span class="o">.</span><span class="n">set_cwd</span><span class="p">(</span><span class="n">target_path</span><span class="p">)</span>
+<span class="c1"># download data set</span>
+<span class="n">data_download</span><span class="o">.</span><span class="n">download_data</span><span class="p">(</span><span class="n">data_url</span><span class="p">,</span> <span class="n">data_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="preprocess-data">
+<h2>Preprocess data<a class="headerlink" href="#preprocess-data" title="Link to this heading">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialize class and create a new instance</span>
+<span class="n">pol_data</span> <span class="o">=</span> <span class="n">PolitenessData</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
+<span class="c1"># preprocess data set</span>
+<span class="n">df</span><span class="p">,</span> <span class="n">df_sum</span> <span class="o">=</span> <span class="n">pol_data</span><span class="o">.</span><span class="n">data_preprocessed</span><span class="p">(</span><span class="n">data_file</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean pitch grouped by gender and attitude&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_sum</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Excerpt data set&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean pitch grouped by gender and attitude
+shape: (4, 3)
+┌──────────┬────────┬────────────┐
+│ attitude ┆ gender ┆ mean_pitch │
+│ ---      ┆ ---    ┆ ---        │
+│ str      ┆ str    ┆ f64        │
+╞══════════╪════════╪════════════╡
+│ pol      ┆ F      ┆ 233.285714 │
+│ inf      ┆ F      ┆ 260.685714 │
+│ pol      ┆ M      ┆ 132.98     │
+│ inf      ┆ M      ┆ 144.490476 │
+└──────────┴────────┴────────────┘
+ 
+Excerpt data set
+shape: (4, 6)
+┌─────────┬────────┬──────────┬──────────┬───────────┬────────────┐
+│ subject ┆ gender ┆ scenario ┆ attitude ┆ frequency ┆ mean_pitch │
+│ ---     ┆ ---    ┆ ---      ┆ ---      ┆ ---       ┆ ---        │
+│ str     ┆ str    ┆ i64      ┆ str      ┆ f64       ┆ f64        │
+╞═════════╪════════╪══════════╪══════════╪═══════════╪════════════╡
+│ F1      ┆ F      ┆ 1        ┆ polite   ┆ 213.3     ┆ 233.285714 │
+│ F1      ┆ F      ┆ 1        ┆ informal ┆ 204.5     ┆ 260.685714 │
+│ F1      ┆ F      ┆ 2        ┆ polite   ┆ 285.1     ┆ 233.285714 │
+│ F1      ┆ F      ┆ 2        ┆ informal ┆ 259.7     ┆ 260.685714 │
+└─────────┴────────┴──────────┴──────────┴───────────┴────────────┘
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="plot-data">
+<h2>Plot data<a class="headerlink" href="#plot-data" title="Link to this heading">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pol_data</span><span class="o">.</span><span class="n">plot_data</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\flobo\OneDrive\Dokumente\Phd-teaching\IntroPython\example-project\example_project\politeness_data.py:97: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  axs.set_xticklabels(labels = [&quot;Female&quot;, &quot;Male&quot;])
+</pre></div>
+</div>
+<img alt="../_images/d3abce3f87f931df209fd47c41f755bf88f504eb4a3382e6bfe7cc90bafdb383.png" src="../_images/d3abce3f87f931df209fd47c41f755bf88f504eb4a3382e6bfe7cc90bafdb383.png" />
+</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">test</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">API</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Example</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#set-local-variables">Set local variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download-data">Download data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#preprocess-data">Preprocess data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#plot-data">Plot data</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../example_project.html" title="previous chapter">example_project package</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, flo.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="../_sources/notebooks/example_notebook.ipynb"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

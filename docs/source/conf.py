@@ -17,32 +17,19 @@ release = '0.0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['sphinx.ext.autodoc',
-    'sphinx.ext.doctest',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
-    'sphinx.ext.coverage',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.githubpages',
-    'sphinx.ext.napoleon',]
-
-# Napoleon settings
-napoleon_google_docstring = True
-napoleon_numpy_docstring = True
-napoleon_include_init_with_doc = True
-napoleon_include_private_with_doc = True
-napoleon_include_special_with_doc = True
-napoleon_use_admonition_for_examples = False
-napoleon_use_admonition_for_notes = False
-napoleon_use_admonition_for_references = False
-napoleon_use_ivar = False
-napoleon_use_param = True
-napoleon_use_rtype = True
+extensions = [
+    "sphinx.ext.autodoc",     # Support automatic documentation
+    "sphinx.ext.coverage",    # Automatically check if functions are documented
+    "sphinx.ext.mathjax",     # Allow support for algebra
+    "sphinx.ext.viewcode",    # Include the source code in documentation
+    "numpydoc",               # Support NumPy style docstrings
+    "sphinx.ext.autosummary", # Generates function/method/attribute summary lists
+    "sphinx.ext.napoleon",    # Enables Sphinx to parse both NumPy and Google style docstrings
+    "myst_nb",                # For compiling Jupyter Notebooks into high quality documentation formats
+]
 
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = []
 
 
 
@@ -51,3 +38,27 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_theme = 'alabaster'
 html_static_path = ['_static']
+
+numpydoc_show_class_members = False
+
+autodoc_default_options = {
+    "members": "var1, var2",
+    "special-members": "__call__,__init__",
+    "undoc-members": True,
+    "exclude-members": "__weakref__",
+    "member-order": "bysource"
+}
+
+# do not execute jupyter notebooks when building docs
+nb_execution_mode = "off"
+
+# download notebooks as .ipynb and not as .ipynb.txt
+html_sourcelink_suffix = ""
+
+suppress_warnings = [
+    f"autosectionlabel._examples/{filename.split('.')[0]}"
+    for filename in os.listdir("notebooks/")
+    if os.path.isfile(os.path.join("notebooks/", filename))
+]  # Avoid duplicate label warnings for Jupyter notebooks.
+
+remove_from_toctrees = ["_autosummary/*"]

@@ -1,18 +1,15 @@
-![Tests](https://github.com/florence-bockting/test-repo/actions/workflows/documentation.yml/badge.svg)
+# Example project 
 
-# Example project
-
-This is an exercise repository. Description will follow.
+This is an example project. 
 
 ## Install
 will follow
 
-## Usage 
+## Usage
 will follow
 
 ## Contributing
 will follow
 
-## License
-The content of this site is licensed under the MIT License
-
+## License 
+will follow
