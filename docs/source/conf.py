@@ -39,7 +39,7 @@ html_theme = 'sphinx_book_theme'
 html_title = "Example Project"
 html_static_path = ['_static']
 
-tml_theme_options = {
+html_theme_options = {
     "repository_url": "https://github.com/florence-bockting/example-project",
     "repository_branch": "master",
     "use_edit_page_button": True,
