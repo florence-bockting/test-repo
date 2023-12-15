@@ -14,7 +14,7 @@ jobs:
       run: |
         pip install "numpydoc==1.1.0" "Sphinx==4.4.0" .
     - name: Build docs
-      run: sphinx-build ../source ./build
+      run: sphinx-build ../docs/source ./build
     - name: Deploy documentation to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
