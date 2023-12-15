@@ -1,27 +1,51 @@
 name: documentation
-
-on: [push, pull_request, workflow_dispatch]
-
-permissions:
-  contents: write
+on:
+  push:
+    branches:
+      - master
 
 jobs:
-  docs:
+
+  build_docs:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
+      - name: Checkout main
+        uses: actions/checkout@v3
+        with:
+          path: master
+
+      - name: Checkout gh-pages
+        uses: actions/checkout@v3
+        with:
+          path: gh-pages
+          ref: gh-pages
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+          cache: 'pip'
+
       - name: Install dependencies
         run: |
-          pip install sphinx sphinx-book-theme myst_parser numpydoc myst_nb ghp-import
-      - name: Sphinx build
+          cd ./master
+          python -m pip install .[docs]
+      - name: Make the Sphinx docs
         run: |
-          cd docs/
-          make html
-      - name: Run ghp-import
-        run: | 
-          ghp-import -n -p -f docs/build/html    
-      - name: Run a multi-line script
+          cd ./master/docs
+          make clean
+          make github
+      - name: Commit changes to docs
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          cd ./gh-pages
+          cp -R ../master/docs/* ./
+          git config --local user.email ""
+          git config --local user.name "github-actions"
+          git add -A
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "auto: Rebuild docs."
+            git  push
+          else
+            echo No commit made because the docs have not changed.
+          fi
