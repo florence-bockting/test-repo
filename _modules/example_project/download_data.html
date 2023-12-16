@@ -280,7 +280,7 @@ document.write(`
 <span class="kn">import</span> <span class="nn">pathlib</span>
 
 <div class="viewcode-block" id="DownloadData"><a class="viewcode-back" href="../../example_project.html#example_project.download_data.DownloadData">[docs]</a><span class="k">class</span> <span class="nc">DownloadData</span><span class="p">():</span>
-<div class="viewcode-block" id="DownloadData.__init__"><a class="viewcode-back" href="../../example_project.html#example_project.download_data.DownloadData.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_url</span><span class="p">,</span> <span class="n">target_path</span><span class="p">,</span> <span class="n">data_file</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_url</span><span class="p">,</span> <span class="n">target_path</span><span class="p">,</span> <span class="n">data_file</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Download, preprocess, and plot politeness data from Bodo Winter</span>
 
 <span class="sd">        Parameters</span>
@@ -295,14 +295,14 @@ document.write(`
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">target_path</span> <span class="o">=</span> <span class="n">target_path</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data_url</span> <span class="o">=</span> <span class="n">data_url</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data_file</span> <span class="o">=</span> <span class="n">data_file</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_file</span> <span class="o">=</span> <span class="n">data_file</span>
         
-<div class="viewcode-block" id="DownloadData.__call__"><a class="viewcode-back" href="../../example_project.html#example_project.download_data.DownloadData.__call__">[docs]</a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
         <span class="c1"># set current working directory   </span>
         <span class="bp">self</span><span class="o">.</span><span class="n">set_cwd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target_path</span><span class="p">)</span>
         <span class="c1"># download data set from specified url</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">download_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_url</span><span class="p">,</span> <span class="n">file_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_file</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">download_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_url</span><span class="p">,</span> <span class="n">file_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_file</span><span class="p">)</span>
         
 <div class="viewcode-block" id="DownloadData.set_cwd"><a class="viewcode-back" href="../../example_project.html#example_project.download_data.DownloadData.set_cwd">[docs]</a>    <span class="k">def</span> <span class="nf">set_cwd</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">target_path</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Set current working directory to desired local path</span>
