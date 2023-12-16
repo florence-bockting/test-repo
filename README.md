@@ -1,5 +1,5 @@
 ![Tests](https://github.com/florence-bockting/test-repo/actions/workflows/docs.yml/badge.svg)
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 # Example project 
 
 This is an example project. 
