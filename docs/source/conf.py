@@ -27,16 +27,6 @@ extensions = [
 templates_path = ['_templates']
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
-numpydoc_show_class_members = False
-
-autodoc_default_options = {
-    "members": "var1, var2",
-    "special-members": "__call__,__init__",
-    "undoc-members": True,
-    "exclude-members": "__weakref__",
-    "member-order": "bysource"
-}
-
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 

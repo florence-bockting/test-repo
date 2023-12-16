@@ -1,4 +1,5 @@
-![Tests](https://github.com/florence-bockting/test-repo/actions/workflows/documentation.yml/badge.svg)
+![Tests](https://github.com/florence-bockting/test-repo/actions/workflows/docs
+.yml/badge.svg)
 
 # Example project 
 
