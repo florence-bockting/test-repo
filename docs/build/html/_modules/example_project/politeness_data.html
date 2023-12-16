@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>example_project.politeness_data &#8212; test 0.0.1 documentation</title>
+    <title>example_project.politeness_data &#8212; Example Project</title>
   
   
   
@@ -29,6 +29,7 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
@@ -124,7 +125,7 @@
   
   
   
-    <p class="title logo__title">test 0.0.1 documentation</p>
+    <p class="title logo__title">Example Project</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -135,6 +136,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../example_project.html">example_project package</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks/example_notebook.html">Example</a></li>
 </ul>
 
     </div>
@@ -176,6 +178,53 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/florence-bockting/example-project" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/florence-bockting/example-project/issues/new?title=Issue%20on%20page%20%2F_modules/example_project/politeness_data.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -251,6 +300,8 @@ document.write(`
 <div class="viewcode-block" id="DownloadData">
 <a class="viewcode-back" href="../../example_project.html#example_project.politeness_data.DownloadData">[docs]</a>
 <span class="k">class</span> <span class="nc">DownloadData</span><span class="p">():</span>
+<div class="viewcode-block" id="DownloadData.__init__">
+<a class="viewcode-back" href="../../example_project.html#example_project.politeness_data.DownloadData.__init__">[docs]</a>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_url</span><span class="p">,</span> <span class="n">target_path</span><span class="p">,</span> <span class="n">data_file</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Download, preprocess, and plot politeness data from Bodo Winter</span>
 
@@ -266,14 +317,18 @@ document.write(`
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">target_path</span> <span class="o">=</span> <span class="n">target_path</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data_url</span> <span class="o">=</span> <span class="n">data_url</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data_file</span> <span class="o">=</span> <span class="n">data_file</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_file</span> <span class="o">=</span> <span class="n">data_file</span></div>
+
         
+<div class="viewcode-block" id="DownloadData.__call__">
+<a class="viewcode-back" href="../../example_project.html#example_project.politeness_data.DownloadData.__call__">[docs]</a>
     <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
         <span class="c1"># set current working directory   </span>
         <span class="bp">self</span><span class="o">.</span><span class="n">set_cwd</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">target_path</span><span class="p">)</span>
         <span class="c1"># download data set from specified url</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">download_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_url</span><span class="p">,</span> <span class="n">file_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_file</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">download_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_url</span><span class="p">,</span> <span class="n">file_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_file</span><span class="p">)</span></div>
+
         
 <div class="viewcode-block" id="DownloadData.set_cwd">
 <a class="viewcode-back" href="../../example_project.html#example_project.politeness_data.DownloadData.set_cwd">[docs]</a>
@@ -330,6 +385,8 @@ document.write(`
 <div class="viewcode-block" id="PolitenessData">
 <a class="viewcode-back" href="../../example_project.html#example_project.politeness_data.PolitenessData">[docs]</a>
 <span class="k">class</span> <span class="nc">PolitenessData</span><span class="p">():</span>
+<div class="viewcode-block" id="PolitenessData.__init__">
+<a class="viewcode-back" href="../../example_project.html#example_project.politeness_data.PolitenessData.__init__">[docs]</a>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_file</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Download, preprocess, and plot politeness data from Bodo Winter</span>
 
@@ -346,8 +403,11 @@ document.write(`
 <span class="sd">            Plot of the politeness data.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data_file</span> <span class="o">=</span> <span class="n">data_file</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_file</span> <span class="o">=</span> <span class="n">data_file</span></div>
+
         
+<div class="viewcode-block" id="PolitenessData.__call__">
+<a class="viewcode-back" href="../../example_project.html#example_project.politeness_data.PolitenessData.__call__">[docs]</a>
     <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
         <span class="c1"># read and preprocess data set</span>
@@ -355,7 +415,8 @@ document.write(`
         <span class="c1"># show summary statistics</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">summary_stats</span><span class="p">)</span>
         <span class="c1"># plot data</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">plot_data</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">plot_data</span><span class="p">(</span><span class="n">df</span><span class="p">)</span></div>
+
   
    
     <span class="c1"># install pyarrow via pip install pyarrow</span>

@@ -2,10 +2,7 @@
 #
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
-import os
-#import sys
 
-#sys.path.insert(0, os.path.abspath("../../example_project"))
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
@@ -30,7 +27,15 @@ extensions = [
 templates_path = ['_templates']
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
+numpydoc_show_class_members = False
 
+autodoc_default_options = {
+    "members": "var1, var2",
+    "special-members": "__call__,__init__",
+    "undoc-members": True,
+    "exclude-members": "__weakref__",
+    "member-order": "bysource"
+}
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -52,6 +57,8 @@ nb_execution_mode = "off"
 
 # download notebooks as .ipynb and not as .ipynb.txt
 html_sourcelink_suffix = ""
+
+import os
 
 suppress_warnings = [
     f"autosectionlabel._examples/{filename.split('.')[0]}"
